@@ -8,16 +8,12 @@ then
     echo "docker-machine can't be found"
     exit 1
 fi
-# get first machine name
-#DOCKER_MACHINE_NAME=$(docker-machine ls --format "{{.Name}}" | head -1)
-#echo $machine_name
 
 if [[ -z "$DOCKER_MACHINE_NAME" ]]; then
     echo "DOCKER_MACHINE_NAME environment variable isn't set. Have you run docker-machine env?"
     exit 1
 fi
 
-#echo lsof -i :22
 # update the compose files
 ip=$(docker-machine ip $DOCKER_MACHINE_NAME)
 
