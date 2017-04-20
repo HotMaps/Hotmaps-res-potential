@@ -38,6 +38,14 @@ Change directory to the *docker* directory on this repository:
 
 Then run `./run-docker-toolbox.sh`
 
+That's it! Now the web service should be up and running.
+
+To check that everything is working, open a web browser and enter the IP of the Docker machine we retrieved above, **using port 8181**: http://*{your-docker-machine-ip}***:8181**
+
+This should display a simple message with Python version.
+
+Now you can put your own code in the "code" directory of this repository. Note that wgsi.py is the entrypoint of your web service.
+
 #### For Docker on Ubuntu or other UNIX
 Open your terminal
 
@@ -47,11 +55,11 @@ Change directory to the *docker* directory on this repository:
 
 Then run `./run-ubuntu.sh`
 
-### That's it! 
-Now the web service should be up and running.
+That's it! Now the web service should be up and running.
 
 To check that everything is working, open a web browser and enter the IP of the Docker machine we retrieved above, **using port 8181**: http://localhost**:8181**
 
 This should display a simple message with Python version.
 
 Now you can put your own code in the "code" directory of this repository. Note that wgsi.py is the entrypoint of your web service.
+
