@@ -53,7 +53,7 @@ Change directory to the *docker* directory on this repository:
 
 `cd my-git-directory/docker`
 
-Then run `./run-ubuntu.sh`
+Then run `sudo ./run-ubuntu.sh`
 
 That's it! Now the web service should be up and running.
 
@@ -63,3 +63,11 @@ This should display a simple message with Python version.
 
 Now you can put your own code in the "code" directory of this repository. Note that wgsi.py is the entrypoint of your web service.
 
+#### For any other system
+On any other system, just open your terminal where you have access to "docker".
+
+Change directory to the *docker* directory on this repository:
+
+`cd my-git-directory/docker`
+
+Then run `docker run -d -v "/absolute/path/to/repository/code:/data" -p 8181:80 -it hotmaps/res-potential`
