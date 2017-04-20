@@ -57,7 +57,7 @@ Then run `sudo ./run-ubuntu.sh`
 
 That's it! Now the web service should be up and running.
 
-To check that everything is working, open a web browser and enter the IP of the Docker machine we retrieved above, **using port 8181**: http://localhost**:8181**
+To check that everything is working, open a web browser and enter the IP of the Docker machine we retrieved above, **using port 8181**: http://localhost:8181
 
 This should display a simple message with Python version.
 
