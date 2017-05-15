@@ -26,6 +26,22 @@ Make sure you have VT-X/AMD-v enabled.
 
 #### On Ubuntu 14.04+
 Get Docker from [https://store.docker.com/editions/community/docker-ce-server-ubuntu?tab=description](https://store.docker.com/editions/community/docker-ce-server-ubuntu?tab=description)
+
+#### On Archlinux
+Follow the installation procedure on [https://docs.docker.com/engine/installation/linux/archlinux/](https://docs.docker.com/engine/installation/linux/archlinux/)
+
+Dependencies: 
+
+- bridge-utils
+- device-mapper
+- iproute2
+- sqlite
+
+Installation:
+
+    sudo pacman -S docker
+
+
 #### On other systems or distributions
 Get the installation procedure from [https://www.docker.com/get-docker](https://www.docker.com/get-docker)
 ### Running Docker image
@@ -34,15 +50,17 @@ Open a terminal (Docker Quickstart Terminal for Docker toolbox).
 
 Check that everything is working by running the following command:
 
-`docker-machine ip`
+    docker-machine ip
 
 This should return the IP of your active Docker machine that we will use later to connect to our web service (e.g. 192.168.99.100).
 
 Change directory to the *docker* directory on this repository:
 
-`cd my-git-directory/docker`
+    cd my-git-directory/docker
 
-Then run `./run-docker-toolbox.sh`
+Then run:
+
+    ./run-docker-toolbox.sh
 
 That's it! Now the web service should be up and running.
 
@@ -57,9 +75,11 @@ Open your terminal
 
 Change directory to the *docker* directory on this repository:
 
-`cd my-git-directory/docker`
+    cd my-git-directory/docker
 
-Then run `sudo ./run-ubuntu.sh`
+Then run:
+
+    sudo ./run-ubuntu.sh
 
 That's it! Now the web service should be up and running.
 
@@ -74,8 +94,10 @@ On any other system, just open your terminal where you have access to "docker".
 
 Change directory to the *docker* directory on this repository:
 
-`cd my-git-directory/docker`
+    cd my-git-directory/docker
 
-Then run `docker run -d -v "/absolute/path/to/repository/code:/data" -p 8181:80 -it hotmaps/res-potential`
+Then run:
+
+    docker run -d -v "/absolute/path/to/repository/code:/data" -p 8181:80 -it hotmaps/res-potential
 
 To check that everything is working, open a web browser and enter the IP of the Docker machine we retrieved above, **using port 8181**: http://localhost:8181

@@ -10,7 +10,7 @@ echo ip for docker is $ip
 echo Creating container...
 
 id=$(docker run -d -v "${BASEDIR}/code:/data" -p 8181:80 -it ${IMAGE_NAME})
-exit_cod=$?
+exit_code=$?
 
 if [ ${exit_code} = 0 ]
     then
