@@ -39,8 +39,14 @@ Dependencies:
 
 Installation:
 
+    # install docker
     sudo pacman -S docker
+    
+    # start docker
+    sudo systemctl start docker
 
+    # start docker with system boot
+    sudo systemctl enable docker
 
 #### On other systems or distributions
 Get the installation procedure from [https://www.docker.com/get-docker](https://www.docker.com/get-docker)
